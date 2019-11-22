@@ -8,8 +8,7 @@ class UserController {
         User.create({
             name: req.body.name,
             email: req.body.email,
-            password: req.body.password,
-            role: 'admin'
+            password: req.body.password
         })
             .then((newUser) => {
                 res.status(201).json( {newUser, message: 'success sign up'})
